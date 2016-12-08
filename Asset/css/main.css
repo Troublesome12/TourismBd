@@ -1,0 +1,407 @@
+/* General Blueprint Style */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background: #e9ecef;
+    margin: 0px auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #F3F3F3;
+    z-index: 100;
+    height: 180px;
+    overflow: hidden;
+    -webkit-transition: height 0.4s;
+    -moz-transition: height 0.4s;
+    transition: height 0.4s;
+}
+
+.header .inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1.875em;
+}
+
+.header h1,
+.header nav {
+    display: inline-block;
+    position: relative;
+}
+
+
+/* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+
+.header h1,
+.header nav a {
+    line-height: 200px;
+}
+
+.header h1 {
+    color: #EF6E7E;
+    font-size: 4.5em;
+    margin: 0;
+    float: left;
+    font-weight: 500;
+}
+
+.header h1 span {
+    color: #0B6E4F;
+    font-weight: 600;
+}
+
+.header nav {
+    float: right;
+    margin-right: -50px;
+}
+
+.header nav a {
+    color: #aaa;
+    font-weight: 700;
+    margin: 0 0 0 20px;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    color: #333;
+}
+
+
+/* Transitions and class for reduced height */
+
+.header h1,
+.header nav a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.header.header-shrink {
+    height: 90px;
+}
+
+.header.header-shrink h1,
+.header.header-shrink nav a {
+    line-height: 90px;
+}
+
+.header.header-shrink h1 {
+    font-size: 3em;
+}
+
+.header.header-shrink nav a {
+    font-size: 1.7em;
+}
+
+#slider {
+    margin-top: 180px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+#slider img {
+    width: 100%;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 15px;
+    /* Position the tooltip */
+    position: relative;
+    z-index: 1;
+    left: 10%;
+}
+
+.tooltip .tooltiptext-shrink {
+    padding: 3px 8px;
+    font-size: 13px;
+    left: 10%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#grid_header {
+    width: 100%;
+    height: 170px;
+    margin-top: 50px;
+}
+
+#grid_header p {
+    color: #0B6E4F;
+    padding: 50px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.fancy span {
+    display: inline-block;
+    position: relative;
+}
+
+.fancy span:before,
+.fancy span:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    border-bottom: 3px solid #BE4856;
+    border-top: 3px solid #BE4856;
+    top: 0;
+    width: 580px;
+    margin: 18px;
+}
+
+.fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.grid {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 0 6em;
+    list-style: none;
+}
+
+.grid_container {
+    width: 30%;
+    height: 350px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #888;
+    background: #fff;
+    overflow: hidden;
+}
+
+.grid_item {
+    width: 100%;
+    height: 300px;
+    border: 4px solid white;
+    background: #fff;
+    overflow: hidden;
+}
+
+.grid_item a {
+    text-decoration: none;
+}
+
+.grid_img {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    -webkit-filter: grayscale(20%);
+    -moz-filter: grayscale(20%);
+    -ms-filter: grayscale(20%);
+    -o-filter: grayscale(20%);
+    filter: grayscale(20%);
+}
+
+.grid_img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.grid_item-title {
+    font-family: 'Caveat', cursive;
+    line-height: 1;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+#zilla_list {
+    position: relative;
+    background: #EF6E7E;
+    padding: 5px;
+    text-align: center;
+}
+
+#zilla_list ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#zilla_list ul li {
+    list-style: none;
+    font-size: 1.5em;
+    padding: 20px;
+    display: inline-block;
+    width: 180px;
+    line-height: 60px;
+    opacity: 0;
+    left: 100%;
+    position: relative;
+}
+
+#zilla_list ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#zilla_list ul li a:hover {
+    color: #ccc;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    padding: 10px 30px;
+    background: #F3F3F3;
+    color: #999;
+    font-size: 16px;
+}
+
+.footer a,
+.footer-right ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+}
+
+.footer-right ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 0px;
+    padding: 0 12px;
+    border-left: 1px solid black;
+}
+
+.footer-right ul li:nth-child(1) {
+    border: none;
+}
+
+.footer a:hover,
+.footer-right ul li a:hover {
+    color: #EF6E7E;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* Example Media Queries */
+
+@media screen and (max-width: 1100px) {
+    .header .inner {
+        width: 100%;
+    }
+    .header h1,
+    .header nav {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+    .header nav {
+        margin-left: 50px;
+    }
+    .header nav a {
+        padding-left: 10px;
+    }
+    .header h1,
+    .header nav a {
+        line-height: 90px;
+    }
+    .header nav a {
+        margin: 0 10px;
+    }
+    .header.header-shrink h1,
+    .header.header-shrink nav a {
+        line-height: 45px;
+    }
+    .header.header-shrink h1 {
+        font-size: 2em;
+    }
+    .header.header-shrink nav a {
+        font-size: 1.2em;
+    }
+    .grid_container {
+        width: 45%;
+        max-width: none;
+    }
+    #zilla_list ul li {
+        font-size: 1.4em;
+        padding: 15px;
+        width: 160px;
+    }
+    .footer-left,
+    .footer-right {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header h1,
+    .header nav a {
+        line-height: 90px;
+    }
+    .header nav a {
+        padding-left: 0px;
+    }
+    .grid_container {
+        width: 95%;
+        max-width: none;
+    }
+    #zilla_list ul li {
+        font-size: 1.2em;
+        padding: 15px;
+        width: 150px;
+    }
+}
